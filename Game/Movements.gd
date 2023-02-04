@@ -6,15 +6,13 @@ const REC_ROOT_IMG = preload("res://Game/Root/root_image.tscn")
 const IMAGE_SIZE = 80
 const VELOCITY = 100
 
+# Mover esto a main
 var objectives := []
+var dir_index := -1
 
 # Root
 var root
 
-# Dirección hacia donde va
-var current_direction := Vector2.ZERO
-var last_direction := Vector2.ZERO
-var dir_index := -1
 
 var movement := 0
 
@@ -38,14 +36,14 @@ func change_direction():
 	
 	if root and is_instance_valid(root):
 		if dir_index < objectives.size():
-			last_direction = current_direction
+			Main.last_direction = Main.current_direction
 			# Nueva dirección
-			current_direction = objectives[dir_index].global_position - root.global_position
+			Main.current_direction = objectives[dir_index].global_position - root.global_position
 
 
-func _process(delta):
+func _physics_process(delta):
 	if root and is_instance_valid(root):
-		root.global_position += delta * (current_direction.normalized()) * VELOCITY
+		root.global_position += delta * (Main.current_direction.normalized()) * VELOCITY
 		
 		if dir_index < objectives.size() and objectives[dir_index].is_root_detected:
 			change_direction()
@@ -60,8 +58,8 @@ func _process(delta):
 		last_root_position = objectives[dir_index - 1].global_position
 		new_sprite.global_position = last_root_position
 		
-		var last_dir_n = last_direction.normalized().round()
-		var current_dir_n = current_direction.normalized().round()
+		var last_dir_n = Main.last_direction.normalized().round()
+		var current_dir_n = Main.current_direction.normalized().round()
 		
 		if last_dir_n == current_dir_n:
 			# Cambiar la imagen dependiendo de la dirección

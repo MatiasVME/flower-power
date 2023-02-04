@@ -11,17 +11,20 @@ config_version=5
 [application]
 
 config/name="FlowerPower"
-run/main_scene="res://Game/Game.tscn"
+run/main_scene="res://MainScreens/MainMenu/MainMenu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
+
+[autoload]
+
+Main="*res://Autoload/Main.gd"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/mode="canvas_items"
 
 [rendering]
 

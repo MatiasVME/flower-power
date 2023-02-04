@@ -1,17 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjy002weooifp"]
+[gd_scene load_steps=9 format=3 uid="uid://cjy002weooifp"]
 
 [ext_resource type="Script" path="res://Game/Game.gd" id="1_8jeba"]
-[ext_resource type="AudioStream" uid="uid://pmu5fnerb822" path="res://Music/Test.ogg" id="2_nw4gs"]
+[ext_resource type="PackedScene" uid="uid://dmst15xi82uqn" path="res://Game/Background/Background.tscn" id="2_j0lyt"]
 [ext_resource type="Script" path="res://Game/Inputs.gd" id="3_6ej87"]
+[ext_resource type="AudioStream" uid="uid://385fu3kbm1gt" path="res://Music/gameplay_test_alpha_skeleton_thing.ogg" id="3_omr4u"]
 [ext_resource type="Script" path="res://Game/Movements.gd" id="4_jm2wn"]
 [ext_resource type="PackedScene" uid="uid://q6hk81b311vm" path="res://Game/Root/Root.tscn" id="5_gnqid"]
 [ext_resource type="PackedScene" uid="uid://ccc3amjfoo480" path="res://Game/Objective/objective.tscn" id="5_gv825"]
+[ext_resource type="AudioStream" uid="uid://bv7xtc4657hdf" path="res://Sound/clap.ogg" id="8_jbj1q"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_8jeba")
 
+[node name="Background" parent="." instance=ExtResource("2_j0lyt")]
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_nw4gs")
+stream = ExtResource("3_omr4u")
 autoplay = true
 
 [node name="Inputs" type="Node" parent="."]
@@ -85,3 +89,6 @@ position = Vector2(880, 640)
 
 [node name="Objective18" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(880, 720)
+
+[node name="Clap" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jbj1q")

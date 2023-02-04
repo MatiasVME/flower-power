@@ -3,5 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dmst15xi82uqn" path="res://Game/Background/Background.tscn" id="1_mwivq"]
 
 [node name="HUD" type="CanvasLayer"]
+layer = -1
 
 [node name="Background" parent="." instance=ExtResource("1_mwivq")]
+z_index = -3

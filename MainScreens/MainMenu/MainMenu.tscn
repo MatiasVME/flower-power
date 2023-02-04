@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://cvo21r5bivbi7"]
+[gd_scene load_steps=4 format=3 uid="uid://cvo21r5bivbi7"]
+
+[ext_resource type="Texture2D" uid="uid://dct34rghgvtsm" path="res://Game/Background/plantilla.png" id="1_2do7u"]
+[ext_resource type="Script" path="res://MainScreens/MainMenu/MainMenu.gd" id="1_smk1l"]
+[ext_resource type="FontFile" uid="uid://l7nrw5flo473" path="res://Fonts/Sunflower.ttf" id="3_45ukj"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +11,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_smk1l")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_2do7u")
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Center"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="Center/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.811765, 0.768627, 0.321569, 1)
+theme_override_fonts/font = ExtResource("3_45ukj")
+theme_override_font_sizes/font_size = 64
+text = "Comenzar Wiiii!"
+
+[connection signal="pressed" from="Center/VBox/Start" to="." method="_on_start_pressed"]

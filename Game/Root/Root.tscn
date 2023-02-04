@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Game/Root/Root.gd" id="1_lrxqb"]
 [ext_resource type="PackedScene" uid="uid://bqgbfowebat87" path="res://Game/Root/root_image.tscn" id="2_tx8j8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_legyl"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bb1m"]
 size = Vector2(1, 1)
 
-[sub_resource type="Animation" id="Animation_xmn46"]
+[sub_resource type="Animation" id="Animation_h8hra"]
 resource_name = "Idle"
 length = 0.4
 loop_mode = 1
@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_wao16"]
+[sub_resource type="Animation" id="Animation_d3tdq"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -38,13 +38,13 @@ tracks/0/keys = {
 "values": [Vector2(1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_on4x6"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bu84q"]
 _data = {
-"Idle": SubResource("Animation_xmn46"),
-"RESET": SubResource("Animation_wao16")
+"Idle": SubResource("Animation_h8hra"),
+"RESET": SubResource("Animation_d3tdq")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aedf3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itls4"]
 
 [node name="Root" type="Node2D"]
 script = ExtResource("1_lrxqb")
@@ -56,7 +56,7 @@ animation = &"tip"
 [node name="Area" type="Area2D" parent="."]
 
 [node name="Collisioin" type="CollisionShape2D" parent="Area"]
-shape = SubResource("RectangleShape2D_legyl")
+shape = SubResource("RectangleShape2D_0bb1m")
 
 [node name="Camera" type="Camera2D" parent="."]
 limit_left = 0
@@ -67,7 +67,7 @@ limit_smoothed = true
 [node name="Anim" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
 libraries = {
-"": SubResource("AnimationLibrary_on4x6")
+"": SubResource("AnimationLibrary_bu84q")
 }
 
 [node name="DetectInput" type="Area2D" parent="."]
@@ -75,7 +75,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="Collision" type="CollisionShape2D" parent="DetectInput"]
-shape = SubResource("RectangleShape2D_aedf3")
+shape = SubResource("RectangleShape2D_itls4")
 
 [connection signal="area_entered" from="DetectInput" to="." method="_on_detect_input_area_entered"]
 [connection signal="area_exited" from="DetectInput" to="." method="_on_detect_input_area_exited"]

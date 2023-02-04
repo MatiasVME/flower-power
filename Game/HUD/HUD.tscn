@@ -4,4 +4,4 @@
 
 [node name="HUD" type="CanvasLayer"]
 
-[node name="TextureRect" parent="." instance=ExtResource("1_mwivq")]
+[node name="Background" parent="." instance=ExtResource("1_mwivq")]

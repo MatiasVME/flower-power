@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmst15xi82uqn"]
+
+[ext_resource type="Texture2D" uid="uid://dct34rghgvtsm" path="res://Game/Background/plantilla.png" id="1_76qyo"]
+
+[node name="Background" type="Sprite2D"]
+z_index = -1
+texture = ExtResource("1_76qyo")
+centered = false

@@ -4,6 +4,7 @@ const REC_ROOT = preload("res://Game/Root/Root.tscn")
 const REC_ROOT_IMG = preload("res://Game/Root/root_image.tscn")
 
 const IMAGE_SIZE = 80
+const VELOCITY = 100
 
 var objectives := []
 
@@ -44,7 +45,7 @@ func change_direction():
 
 func _process(delta):
 	if root and is_instance_valid(root):
-		root.global_position += delta * (current_direction.normalized()) * 100
+		root.global_position += delta * (current_direction.normalized()) * VELOCITY
 		
 		if dir_index < objectives.size() and objectives[dir_index].is_root_detected:
 			change_direction()
@@ -59,28 +60,42 @@ func _process(delta):
 		last_root_position = objectives[dir_index - 1].global_position
 		new_sprite.global_position = last_root_position
 		
-		if last_direction != current_direction:
+		var last_dir_n = last_direction.normalized().round()
+		var current_dir_n = current_direction.normalized().round()
+		
+		if last_dir_n == current_dir_n:
 			# Cambiar la imagen dependiendo de la dirección
-			match last_direction.normalized().round():
+			match last_dir_n:
 				Vector2.DOWN:
+					new_sprite.rotation_degrees = 0
 					new_sprite["animation"] = "body"
 					new_sprite["frame"] = randi_range(0, 3)
-					print("DOWN")
 				Vector2.RIGHT:
 					new_sprite.rotation_degrees = 90
 					new_sprite["animation"] = "body"
 					new_sprite["frame"] = randi_range(0, 3)
-					print("RIGHT")
 				Vector2.LEFT:
 					new_sprite.rotation_degrees = -90
 					new_sprite["animation"] = "body"
 					new_sprite["frame"] = randi_range(0, 3)
-					print("LEFT")
 		else:
-			var last_dir_n = last_direction.normalized().round()
-			print(":O")
-#			if last_dir_n == 
-			
-		
-#		print(last_direction.normalized().round())
-	
+			new_sprite.rotation_degrees = 0
+			if last_dir_n == Vector2.LEFT:
+				new_sprite.rotation_degrees = 0
+				new_sprite["animation"] = "curve"
+			elif current_dir_n == Vector2.LEFT:
+				new_sprite["animation"] = "curve"
+				new_sprite.flip_v = true
+				new_sprite.flip_h = true
+			elif current_dir_n == Vector2.RIGHT:
+				new_sprite["animation"] = "curve"
+				new_sprite.flip_v = true
+				new_sprite.flip_h = false
+			elif last_dir_n == Vector2.RIGHT:
+				new_sprite["animation"] = "curve"
+				new_sprite.flip_v = false
+				new_sprite.flip_h = true
+			elif current_dir_n == Vector2.DOWN:
+				new_sprite.rotation_degrees = 0
+				new_sprite["animation"] = "body"
+				new_sprite["frame"] = randi_range(0, 3)

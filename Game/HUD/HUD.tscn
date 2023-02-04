@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://bd0c7dbh4dss4"]
+[gd_scene load_steps=2 format=3 uid="uid://bd0c7dbh4dss4"]
+
+[ext_resource type="PackedScene" uid="uid://dmst15xi82uqn" path="res://Game/Background/Background.tscn" id="1_mwivq"]
 
 [node name="HUD" type="CanvasLayer"]
+
+[node name="TextureRect" parent="." instance=ExtResource("1_mwivq")]

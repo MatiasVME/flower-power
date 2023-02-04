@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqgbfowebat87"]
+
+[ext_resource type="Texture2D" uid="uid://n5p86v8v2l3s" path="res://Game/Root/root_body_1.png" id="1_ctt81"]
+[ext_resource type="Texture2D" uid="uid://fw07fb74lnkj" path="res://Game/Root/root_tip.png" id="1_ni5ip"]
+[ext_resource type="Texture2D" uid="uid://sp05gvam3hbn" path="res://Game/Root/root_body_2.png" id="2_kfa50"]
+[ext_resource type="Texture2D" uid="uid://ocntdabvbxki" path="res://Game/Root/root_body_3.png" id="3_laij3"]
+[ext_resource type="Texture2D" uid="uid://li10na6kj543" path="res://Game/Root/root_curve.png" id="4_a1t0s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6nfu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ctt81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kfa50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_laij3")
+}],
+"loop": true,
+"name": &"body",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a1t0s")
+}],
+"loop": true,
+"name": &"curve",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ni5ip")
+}],
+"loop": true,
+"name": &"tip",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_r0y0e"]
+resource_name = "SHOW"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.25, 1.25), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2ymsj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_17bqd"]
+_data = {
+"RESET": SubResource("Animation_2ymsj"),
+"SHOW": SubResource("Animation_r0y0e")
+}
+
+[node name="RootImage" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_6nfu5")
+animation = &"body"
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+autoplay = "SHOW"
+libraries = {
+"": SubResource("AnimationLibrary_17bqd")
+}

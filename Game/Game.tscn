@@ -1,0 +1,108 @@
+[gd_scene load_steps=18 format=3 uid="uid://cjy002weooifp"]
+
+[ext_resource type="Script" path="res://Game/Game.gd" id="1_8jeba"]
+[ext_resource type="AudioStream" uid="uid://pmu5fnerb822" path="res://Music/Test.ogg" id="2_nw4gs"]
+[ext_resource type="Script" path="res://Game/Inputs.gd" id="3_6ej87"]
+[ext_resource type="Script" path="res://Game/Movements.gd" id="4_jm2wn"]
+[ext_resource type="PackedScene" uid="uid://q6hk81b311vm" path="res://Game/Root/Root.tscn" id="5_gnqid"]
+[ext_resource type="PackedScene" uid="uid://ccc3amjfoo480" path="res://Game/Objective/objective.tscn" id="5_gv825"]
+[ext_resource type="Texture2D" uid="uid://fw07fb74lnkj" path="res://Game/Root/root_tip.png" id="6_tq01d"]
+[ext_resource type="Texture2D" uid="uid://n5p86v8v2l3s" path="res://Game/Root/root_body_1.png" id="7_ptl06"]
+[ext_resource type="Texture2D" uid="uid://sp05gvam3hbn" path="res://Game/Root/root_body_2.png" id="8_l1vgq"]
+[ext_resource type="Texture2D" uid="uid://ocntdabvbxki" path="res://Game/Root/root_body_3.png" id="9_csddp"]
+[ext_resource type="Texture2D" uid="uid://li10na6kj543" path="res://Game/Root/root_curve.png" id="10_bibhn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8wkje"]
+texture = ExtResource("6_tq01d")
+texture_region_size = Vector2i(80, 80)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_keomv"]
+texture = ExtResource("7_ptl06")
+texture_region_size = Vector2i(80, 80)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y3d8g"]
+texture = ExtResource("8_l1vgq")
+texture_region_size = Vector2i(80, 80)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7nw5"]
+texture = ExtResource("9_csddp")
+texture_region_size = Vector2i(80, 80)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wuqve"]
+texture = ExtResource("10_bibhn")
+texture_region_size = Vector2i(80, 80)
+
+[sub_resource type="TileSet" id="TileSet_5sxmv"]
+tile_size = Vector2i(80, 80)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Root"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/1 = SubResource("TileSetAtlasSource_8wkje")
+sources/2 = SubResource("TileSetAtlasSource_keomv")
+sources/3 = SubResource("TileSetAtlasSource_y3d8g")
+sources/4 = SubResource("TileSetAtlasSource_m7nw5")
+sources/5 = SubResource("TileSetAtlasSource_wuqve")
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_8jeba")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nw4gs")
+pitch_scale = 0.5
+autoplay = true
+
+[node name="Inputs" type="Node" parent="."]
+script = ExtResource("3_6ej87")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[node name="Movements" type="Node" parent="."]
+script = ExtResource("4_jm2wn")
+
+[node name="Root" parent="." instance=ExtResource("5_gnqid")]
+position = Vector2(640, 0)
+
+[node name="Objectives" type="Node2D" parent="."]
+
+[node name="Objective0" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, -2)
+
+[node name="Objective1" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 80)
+
+[node name="Objective2" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 160)
+
+[node name="Objective3" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 160)
+
+[node name="Objective4" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 160)
+
+[node name="Objective5" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 240)
+
+[node name="Objective6" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 320)
+
+[node name="Objective7" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 400)
+
+[node name="Objective8" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 400)
+
+[node name="Objective9" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 400)
+
+[node name="Objective10" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(720, 400)
+
+[node name="Grid" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource("TileSet_5sxmv")
+format = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

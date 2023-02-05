@@ -7,6 +7,9 @@ signal negative_effect()
 
 signal input_key(key) # left | down | right
 
+signal going_crazy()
+signal going_evil()
+
 var can_input := false
 
 # Dirección hacia donde va

@@ -1,13 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://ocsnr11jg1jf"]
+[gd_scene load_steps=13 format=3 uid="uid://ocsnr11jg1jf"]
 
 [ext_resource type="Script" path="res://Game/Counter/Counter.gd" id="1_hjr0t"]
 [ext_resource type="Texture2D" uid="uid://d260r52vumjpx" path="res://Game/Background/Fondo1.png" id="1_nv8jp"]
 [ext_resource type="Texture2D" uid="uid://bdkaune0uhsge" path="res://Game/HUD/Flor/Flor feliz.png" id="2_ux3p6"]
+[ext_resource type="AudioStream" uid="uid://b8sl03y866yj3" path="res://Sound/1.ogg" id="4_8quac"]
 [ext_resource type="FontFile" uid="uid://l7nrw5flo473" path="res://Fonts/Sunflower.ttf" id="4_il4fd"]
+[ext_resource type="AudioStream" uid="uid://c7y5was0qwhy1" path="res://Sound/3.ogg" id="4_sw8j4"]
+[ext_resource type="AudioStream" uid="uid://dn6nusev6li4" path="res://Sound/ready.ogg" id="4_weorp"]
+[ext_resource type="AudioStream" uid="uid://dr6a6m6j4kf2n" path="res://Sound/2.ogg" id="5_k44qx"]
+[ext_resource type="AudioStream" uid="uid://bupjq7idjf4ni" path="res://Sound/go.ogg" id="7_q0tf8"]
 
 [sub_resource type="Animation" id="Animation_krqu0"]
 resource_name = "Counter"
-length = 6.0
+length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -15,10 +20,10 @@ tracks/0/path = NodePath("TextCounter:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 2, 4, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 2, 4, 5.6, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(179, 167), Vector2(179, 167), Vector2(179, 167), Vector2(1130, 153), Vector2(1130, 153)]
+"values": [Vector2(179, 167), Vector2(179, 167), Vector2(179, 167), Vector2(1130, 153), Vector2(1130, 153), Vector2(900, 153)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -39,10 +44,10 @@ tracks/2/path = NodePath("TextCounter/Counter:text")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.9, 2, 3.9, 4, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 3.1, 3.9, 4, 4.9, 5, 5.9, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": ["3", "3", "2", "2", "1", "1"]
+"values": ["READY", "3", "3", "2", "2", "1", "1", "GO!"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -66,7 +71,43 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 1.8, 2, 3.8, 4, 4.2, 4.8, 6),
 "transitions": PackedFloat32Array(1, 0.5, 1, 0.5, 0.5, 1, 0.5, 1),
 "update": 0,
-"values": [Vector2(0.2, 0.2), Vector2(0.2, 0.2), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.7, 0.7), Vector2(0.6, 0.6), Vector2(0.6, 0.6), Vector2(3, 3)]
+"values": [Vector2(0.2, 0.2), Vector2(0.2, 0.2), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.7, 0.7), Vector2(0.6, 0.6), Vector2(0.6, 0.6), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FlorFeliz:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 5.3, 6),
+"transitions": PackedFloat32Array(1, -2, 1),
+"update": 0,
+"values": [0.0, 0.0, 12.5664]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sound:stream")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 3.1, 4.1, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_weorp"), ExtResource("4_sw8j4"), ExtResource("5_k44qx"), ExtResource("4_8quac"), ExtResource("7_q0tf8")]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sound:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.5, 3.1, 4.1, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true, true]
 }
 
 [sub_resource type="Animation" id="Animation_cfxsf"]
@@ -131,6 +172,42 @@ tracks/4/keys = {
 "update": 0,
 "values": [Vector2(0.2, 0.2)]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("FlorFeliz:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sound:stream")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_8quac")]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sound:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j6m5f"]
 _data = {
@@ -175,5 +252,9 @@ theme_override_font_sizes/font_size = 256
 text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8quac")
+pitch_scale = 1.4
 
 [connection signal="animation_finished" from="Anim" to="." method="_on_anim_animation_finished"]

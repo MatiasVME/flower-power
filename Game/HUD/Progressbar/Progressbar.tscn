@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://x6ry6hhtymfq"]
+
+[ext_resource type="Texture2D" uid="uid://c3yeck6i6ftrn" path="res://Game/HUD/Progressbar/Bar-Empty.png" id="1_amsef"]
+[ext_resource type="Script" path="res://Game/HUD/Progressbar/Progressbar.gd" id="1_l7rb6"]
+[ext_resource type="Texture2D" uid="uid://b0rc4eigjdixu" path="res://Game/HUD/Progressbar/Bar-Complete.png" id="2_8vy8j"]
+
+[node name="Progressbar" type="Node2D"]
+position = Vector2(0, 66)
+script = ExtResource("1_l7rb6")
+
+[node name="Progressbar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+fill_mode = 2
+texture_under = ExtResource("1_amsef")
+texture_progress = ExtResource("2_8vy8j")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

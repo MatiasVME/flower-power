@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjy002weooifp"]
+[gd_scene load_steps=10 format=3 uid="uid://cjy002weooifp"]
 
 [ext_resource type="Script" path="res://Game/Game.gd" id="1_8jeba"]
 [ext_resource type="PackedScene" uid="uid://bd0c7dbh4dss4" path="res://Game/HUD/HUD.tscn" id="2_4tgiw"]
@@ -8,11 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://q6hk81b311vm" path="res://Game/Root/Root.tscn" id="5_gnqid"]
 [ext_resource type="PackedScene" uid="uid://ccc3amjfoo480" path="res://Game/Objective/objective.tscn" id="5_gv825"]
 [ext_resource type="AudioStream" uid="uid://bv7xtc4657hdf" path="res://Sound/clap.ogg" id="8_jbj1q"]
+[ext_resource type="AudioStream" uid="uid://bjswidyn74jyh" path="res://Sound/wrong.ogg" id="8_ns05l"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_8jeba")
 
 [node name="Background" parent="." instance=ExtResource("2_j0lyt")]
+metadata/_edit_lock_ = true
 
 [node name="Inputs" type="Node" parent="."]
 script = ExtResource("3_6ej87")
@@ -39,73 +41,33 @@ dir = Vector2(0, -1)
 
 [node name="Objective2" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(640, 160)
-dir = Vector2(-1, 0)
+dir = Vector2(0, -1)
 
 [node name="Objective3" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(560, 160)
-dir = Vector2(-1, 0)
+position = Vector2(640, 240)
+dir = Vector2(0, -1)
 
 [node name="Objective4" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(480, 160)
+position = Vector2(640, 320)
 dir = Vector2(0, -1)
 
 [node name="Objective5" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(480, 240)
+position = Vector2(640, 400)
 dir = Vector2(0, -1)
 
 [node name="Objective6" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(480, 320)
+position = Vector2(640, 480)
 dir = Vector2(0, -1)
 
 [node name="Objective7" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(480, 400)
-dir = Vector2(1, 0)
-
-[node name="Objective8" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(560, 400)
-dir = Vector2(1, 0)
-
-[node name="Objective9" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(640, 400)
-dir = Vector2(1, 0)
-
-[node name="Objective10" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(720, 400)
-dir = Vector2(1, 0)
-
-[node name="Objective11" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(800, 400)
-dir = Vector2(1, 0)
-
-[node name="Objective12" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(880, 400)
-dir = Vector2(0, -1)
-
-[node name="Objective13" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(880, 480)
-dir = Vector2(-1, 0)
-
-[node name="Objective14" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(800, 480)
-dir = Vector2(0, -1)
-
-[node name="Objective15" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(800, 560)
-dir = Vector2(1, 0)
-
-[node name="Objective16" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(880, 560)
-dir = Vector2(0, -1)
-
-[node name="Objective17" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(880, 640)
-dir = Vector2(0, -1)
-
-[node name="Objective18" parent="Objectives" instance=ExtResource("5_gv825")]
-position = Vector2(880, 720)
+position = Vector2(640, 560)
 dir = Vector2(0, -1)
 
 [node name="Clap" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_jbj1q")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ns05l")
+pitch_scale = 1.3
 
 [node name="HUD" parent="." instance=ExtResource("2_4tgiw")]

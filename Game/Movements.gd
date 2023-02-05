@@ -4,7 +4,7 @@ const REC_ROOT = preload("res://Game/Root/Root.tscn")
 const REC_ROOT_IMG = preload("res://Game/Root/root_image.tscn")
 
 const IMAGE_SIZE = 80
-const VELOCITY = 100
+const VELOCITY = 80
 
 # Root
 var root

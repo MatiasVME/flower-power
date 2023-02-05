@@ -10,18 +10,18 @@ func _process(_delta):
 				owner.get_node("Clap").play()
 				Main.positive_effect.emit()
 		else:
-			print("OwO")
+			owner.get_node("Wrong").play()
 	elif Input.is_action_just_pressed("ui_down"):
 		if Main.can_input:
 			if Main.current_direction.normalized().round() == Vector2.DOWN:
 				owner.get_node("Clap").play()
 				Main.positive_effect.emit()
 		else:
-			print("OwO")
+			owner.get_node("Wrong").play()
 	elif Input.is_action_just_pressed("ui_right"):
 		if Main.can_input:
 			if Main.current_direction.normalized().round() == Vector2.RIGHT:
 				owner.get_node("Clap").play()
 				Main.positive_effect.emit()
 		else:
-			print("OwO")
+			owner.get_node("Wrong").play()

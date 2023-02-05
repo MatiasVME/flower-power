@@ -19,3 +19,11 @@ func _on_detect_input_body_entered(body):
 func _on_detect_input_body_exited(body):
 	if body is Root:
 		Main.can_input = false
+
+
+func _on_visible_on_screen_notifier_2d_screen_entered():
+	match dir:
+		Vector2.LEFT:
+			$Follow.rotation_degrees = 90
+		Vector2.RIGHT:
+			$Follow.rotation_degrees = -90

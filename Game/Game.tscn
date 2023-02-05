@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjy002weooifp"]
+[gd_scene load_steps=11 format=3 uid="uid://cjy002weooifp"]
 
 [ext_resource type="Script" path="res://Game/Game.gd" id="1_8jeba"]
 [ext_resource type="PackedScene" uid="uid://bd0c7dbh4dss4" path="res://Game/HUD/HUD.tscn" id="2_4tgiw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Game/Movements.gd" id="4_jm2wn"]
 [ext_resource type="PackedScene" uid="uid://q6hk81b311vm" path="res://Game/Root/Root.tscn" id="5_gnqid"]
 [ext_resource type="PackedScene" uid="uid://ccc3amjfoo480" path="res://Game/Objective/objective.tscn" id="5_gv825"]
+[ext_resource type="PackedScene" uid="uid://bt41y2sw87kvi" path="res://Game/Dialog/Dialog.tscn" id="7_ey8ih"]
 [ext_resource type="AudioStream" uid="uid://bv7xtc4657hdf" path="res://Sound/clap.ogg" id="8_jbj1q"]
 [ext_resource type="AudioStream" uid="uid://bjswidyn74jyh" path="res://Sound/wrong.ogg" id="8_ns05l"]
 
@@ -507,6 +508,159 @@ dir = Vector2(0, -1)
 position = Vector2(640, 7680)
 dir = Vector2(0, -1)
 
+[node name="Texts" type="Node2D" parent="."]
+
+[node name="Dialog" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(980, 399)
+scale = Vector2(0.7, 0.7)
+
+[node name="Dialog2" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(984, 777)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog2" index="0"]
+frame = 1
+
+[node name="Dialog3" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(435, 903)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog3" index="0"]
+frame = 2
+
+[node name="Dialog4" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(1070, 1019)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog4" index="0"]
+position = Vector2(-38.5714, 265.714)
+frame = 3
+
+[node name="Dialog5" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(743, 1837)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog5" index="0"]
+frame = 4
+
+[node name="Dialog6" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(801, 1365)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog6" index="0"]
+frame = 5
+
+[node name="Dialog7" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(340, 1457)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog7" index="0"]
+frame = 6
+
+[node name="Dialog8" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(879, 1638)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog8" index="0"]
+frame = 7
+
+[node name="Dialog9" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(574, 2005)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog9" index="0"]
+frame = 8
+
+[node name="Dialog10" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(713, 2484)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog10" index="0"]
+frame = 9
+
+[node name="Dialog11" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(803, 2728)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog11" index="0"]
+frame = 10
+
+[node name="Dialog12" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(953, 3201)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog12" index="0"]
+frame = 11
+
+[node name="Dialog13" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(770, 3854)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog13" index="0"]
+frame = 12
+
+[node name="Dialog14" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(745, 4995)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog14" index="0"]
+frame = 13
+
+[node name="Dialog15" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(666, 4396)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog15" index="0"]
+frame = 14
+
+[node name="Dialog16" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(811, 5445)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog16" index="0"]
+frame = 15
+
+[node name="Dialog17" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(820, 5845)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog17" index="0"]
+frame = 16
+
+[node name="Dialog18" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(846, 6162)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog18" index="0"]
+frame = 17
+
+[node name="Dialog19" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(814, 6337)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog19" index="0"]
+frame = 18
+
+[node name="Dialog20" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(816, 6557)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog20" index="0"]
+frame = 19
+
+[node name="Dialog21" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(969, 6945)
+scale = Vector2(0.7, 0.7)
+
+[node name="Text" parent="Texts/Dialog21" index="0"]
+frame = 20
+
+[node name="Dialog22" parent="Texts" instance=ExtResource("7_ey8ih")]
+position = Vector2(795, 7151)
+
+[node name="Text" parent="Texts/Dialog22" index="0"]
+frame = 21
+
 [node name="Clap" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_jbj1q")
 
@@ -515,3 +669,25 @@ stream = ExtResource("8_ns05l")
 pitch_scale = 1.3
 
 [node name="HUD" parent="." instance=ExtResource("2_4tgiw")]
+
+[editable path="Texts/Dialog2"]
+[editable path="Texts/Dialog3"]
+[editable path="Texts/Dialog4"]
+[editable path="Texts/Dialog5"]
+[editable path="Texts/Dialog6"]
+[editable path="Texts/Dialog7"]
+[editable path="Texts/Dialog8"]
+[editable path="Texts/Dialog9"]
+[editable path="Texts/Dialog10"]
+[editable path="Texts/Dialog11"]
+[editable path="Texts/Dialog12"]
+[editable path="Texts/Dialog13"]
+[editable path="Texts/Dialog14"]
+[editable path="Texts/Dialog15"]
+[editable path="Texts/Dialog16"]
+[editable path="Texts/Dialog17"]
+[editable path="Texts/Dialog18"]
+[editable path="Texts/Dialog19"]
+[editable path="Texts/Dialog20"]
+[editable path="Texts/Dialog21"]
+[editable path="Texts/Dialog22"]

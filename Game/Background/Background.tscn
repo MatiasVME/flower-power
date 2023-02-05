@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://dmst15xi82uqn"]
 
 [ext_resource type="Texture2D" uid="uid://b2vol74maphlf" path="res://Game/BackgroundLevel/01. Superior 1-transicion.png" id="1_wx28w"]
-[ext_resource type="Texture2D" uid="uid://dxh7ap2ndvqqr" path="res://Game/BackgroundLevel/02. Superior 2-tramo.png" id="2_n7vc1"]
 [ext_resource type="Texture2D" uid="uid://tacb7r5xfgjo" path="res://Game/BackgroundLevel/03. Intermedio 1-transicion.png" id="3_yeava"]
-[ext_resource type="Texture2D" uid="uid://b6ws5a4q8lq51" path="res://Game/BackgroundLevel/04. Intermedio 2-tramo.png" id="4_to7xp"]
 [ext_resource type="Texture2D" uid="uid://n42hbncf5awa" path="res://Game/BackgroundLevel/05. Profundo 1-transicion.png" id="5_3a1vb"]
+[ext_resource type="Texture2D" uid="uid://dinyrf5gy8jbs" path="res://Game/BackgroundLevel/fondo de la tierra1.png" id="5_n1l7j"]
 [ext_resource type="Texture2D" uid="uid://dcv77lfennnco" path="res://Game/BackgroundLevel/06. Profundo 2-tramo.png" id="6_5b3nt"]
+[ext_resource type="Texture2D" uid="uid://brvto888noxan" path="res://Game/BackgroundLevel/fondo de la tierra_2.png" id="6_jfh50"]
 
 [node name="Background" type="Node2D"]
 z_index = -1
@@ -14,27 +14,27 @@ z_index = -1
 texture = ExtResource("1_wx28w")
 centered = false
 
-[node name="bg2" type="Sprite2D" parent="."]
-position = Vector2(0, 1280)
-texture = ExtResource("2_n7vc1")
-centered = false
-
 [node name="bg3" type="Sprite2D" parent="."]
-position = Vector2(0, 2560)
+position = Vector2(0, 1280)
 texture = ExtResource("3_yeava")
 centered = false
 
-[node name="bg4" type="Sprite2D" parent="."]
-position = Vector2(0, 3840)
-texture = ExtResource("4_to7xp")
-centered = false
-
 [node name="bg5" type="Sprite2D" parent="."]
-position = Vector2(0, 5120)
+position = Vector2(0, 2560)
 texture = ExtResource("5_3a1vb")
 centered = false
 
 [node name="bg6" type="Sprite2D" parent="."]
-position = Vector2(0, 6400)
+position = Vector2(0, 3840)
 texture = ExtResource("6_5b3nt")
+centered = false
+
+[node name="bg7" type="Sprite2D" parent="."]
+position = Vector2(0, 5120)
+texture = ExtResource("5_n1l7j")
+centered = false
+
+[node name="bg8" type="Sprite2D" parent="."]
+position = Vector2(0, 6389)
+texture = ExtResource("6_jfh50")
 centered = false

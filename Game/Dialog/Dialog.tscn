@@ -1,3 +1,151 @@
-[gd_scene format=3 uid="uid://bt41y2sw87kvi"]
+[gd_scene load_steps=28 format=3 uid="uid://bt41y2sw87kvi"]
+
+[ext_resource type="Script" path="res://Game/Dialog/Dialog.gd" id="1_7b2ss"]
+[ext_resource type="Texture2D" uid="uid://tt4kdpiudkc0" path="res://Game/Dialog/Text/01. Intro 1.png" id="1_pk36u"]
+[ext_resource type="Texture2D" uid="uid://ncinwqbrlyi5" path="res://Game/Dialog/Text/02. Intro 2.png" id="2_nijvg"]
+[ext_resource type="Texture2D" uid="uid://8qerfqy7dmbc" path="res://Game/Dialog/Text/03. Intro 3.png" id="3_ff5v7"]
+[ext_resource type="Texture2D" uid="uid://b1kj43kibmrok" path="res://Game/Dialog/Text/04. Intro 4.png" id="4_kkp1a"]
+[ext_resource type="Texture2D" uid="uid://bep5kb0plefgg" path="res://Game/Dialog/Text/05. Intro 5.png" id="5_ykkau"]
+[ext_resource type="Texture2D" uid="uid://co1c2785euvup" path="res://Game/Dialog/Text/06. Intro 6.png" id="6_f0h18"]
+[ext_resource type="Texture2D" uid="uid://d02xo8woid8vw" path="res://Game/Dialog/Text/07. Flor primera parte-1.png" id="7_8rpes"]
+[ext_resource type="Texture2D" uid="uid://du20paikg8u6j" path="res://Game/Dialog/Text/08. Flor primera parte-2.png" id="8_pvxlr"]
+[ext_resource type="Texture2D" uid="uid://rb450p1te5fa" path="res://Game/Dialog/Text/09. Flor primera parte-3.png" id="9_mrnn8"]
+[ext_resource type="Texture2D" uid="uid://l35563s7pdoy" path="res://Game/Dialog/Text/10. Flor primera parte-4.png" id="10_5wptf"]
+[ext_resource type="Texture2D" uid="uid://bdlinkciwwskw" path="res://Game/Dialog/Text/11. Flor primera parte-5.png" id="11_g5sd5"]
+[ext_resource type="Texture2D" uid="uid://ci020bdh5621u" path="res://Game/Dialog/Text/12. Flor primera parte-6.png" id="12_rh1m8"]
+[ext_resource type="Texture2D" uid="uid://dm35au1h7h7o" path="res://Game/Dialog/Text/13. Flor primera parte-7.png" id="13_5rc3p"]
+[ext_resource type="Texture2D" uid="uid://c7sw4p7t1tua" path="res://Game/Dialog/Text/14. Flor primera parte-8.png" id="14_g84jw"]
+[ext_resource type="Texture2D" uid="uid://c2yivs6gaynni" path="res://Game/Dialog/Text/15. Flor primera parte-9.png" id="15_rtljp"]
+[ext_resource type="Texture2D" uid="uid://dnwk20isy3cc0" path="res://Game/Dialog/Text/16. Flor segunda parte-1.png" id="16_j80th"]
+[ext_resource type="Texture2D" uid="uid://c2uk7x7n7avv6" path="res://Game/Dialog/Text/17. Flor segunda parte-2.png" id="17_hmtu0"]
+[ext_resource type="Texture2D" uid="uid://cwvfol148axq2" path="res://Game/Dialog/Text/18. Flor segunda parte-3.png" id="18_7o5m8"]
+[ext_resource type="Texture2D" uid="uid://bqp80cdsplme1" path="res://Game/Dialog/Text/19. Flor segunda parte-4.png" id="19_x3frc"]
+[ext_resource type="Texture2D" uid="uid://2q0m26u2yhsv" path="res://Game/Dialog/Text/20. Flor segunda parte-5.png" id="20_7g4u0"]
+[ext_resource type="Texture2D" uid="uid://dbje8mahidfxi" path="res://Game/Dialog/Text/21. Flor segunda parte-6.png" id="21_gequ8"]
+[ext_resource type="Texture2D" uid="uid://dc5j8ijobajbk" path="res://Game/Dialog/Text/22. Flor segunda parte-7.png" id="22_yujqb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nccin"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pk36u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nijvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ff5v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kkp1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ykkau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f0h18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8rpes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pvxlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mrnn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5wptf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g5sd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rh1m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5rc3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_g84jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rtljp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_j80th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hmtu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7o5m8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_x3frc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7g4u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gequ8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yujqb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_l4jnu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qin4f"]
+resource_name = "show"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.0001, 7.5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8el3f"]
+_data = {
+"RESET": SubResource("Animation_l4jnu"),
+"show": SubResource("Animation_qin4f")
+}
 
 [node name="Dialog" type="Node2D"]
+script = ExtResource("1_7b2ss")
+
+[node name="Text" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nccin")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8el3f")
+}
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

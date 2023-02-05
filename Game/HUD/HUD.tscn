@@ -1,9 +1,112 @@
-[gd_scene load_steps=2 format=3 uid="uid://bd0c7dbh4dss4"]
+[gd_scene load_steps=16 format=3 uid="uid://bd0c7dbh4dss4"]
 
-[ext_resource type="PackedScene" uid="uid://dmst15xi82uqn" path="res://Game/Background/Background.tscn" id="1_mwivq"]
+[ext_resource type="Texture2D" uid="uid://drno61nilyf22" path="res://Game/HUD/Flor/Flor locura.png" id="1_bxavq"]
+[ext_resource type="Script" path="res://Game/HUD/HUD.gd" id="1_ov8kc"]
+[ext_resource type="Texture2D" uid="uid://bjah1rhmei5ic" path="res://Game/HUD/Flor/Flor demente.png" id="2_syl3v"]
+[ext_resource type="Texture2D" uid="uid://bdkaune0uhsge" path="res://Game/HUD/Flor/Flor feliz.png" id="3_fwrjl"]
+[ext_resource type="Texture2D" uid="uid://dkjak6e4ape0a" path="res://Game/HUD/Flor/Flor dolor.png" id="4_rawbf"]
+[ext_resource type="Texture2D" uid="uid://hfpggtw0vdnw" path="res://Game/HUD/Key/Down-00.png" id="6_hwx1p"]
+[ext_resource type="Texture2D" uid="uid://3iqfwya3xdck" path="res://Game/HUD/Key/Down-01.png" id="7_7ooue"]
+[ext_resource type="Texture2D" uid="uid://c3py6b5h150vl" path="res://Game/HUD/Key/Left-00.png" id="8_qqc5b"]
+[ext_resource type="Texture2D" uid="uid://bh8hgqul7s5jd" path="res://Game/HUD/Key/Left-01.png" id="9_5868y"]
+[ext_resource type="Texture2D" uid="uid://dqkkq8jw5fq6s" path="res://Game/HUD/Key/Right-00.png" id="10_lfws6"]
+[ext_resource type="Texture2D" uid="uid://taxrahtk5mm2" path="res://Game/HUD/Key/Right-01.png" id="11_ny1i3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tk5i2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bxavq")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_syl3v")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fwrjl")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rawbf")
+}],
+"loop": true,
+"name": &"ouch",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_br5q5"]
+resource_name = "Show"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0yies"]
+_data = {
+"Show": SubResource("Animation_br5q5")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dolqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hwx1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7ooue")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_qqc5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5868y")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_lfws6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ny1i3")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
 
 [node name="HUD" type="CanvasLayer"]
-layer = -1
+script = ExtResource("1_ov8kc")
 
-[node name="Background" parent="." instance=ExtResource("1_mwivq")]
-z_index = -3
+[node name="Flower" type="AnimatedSprite2D" parent="."]
+position = Vector2(1129, 133)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_tk5i2")
+animation = &"normal"
+
+[node name="Anim" type="AnimationPlayer" parent="Flower"]
+libraries = {
+"": SubResource("AnimationLibrary_0yies")
+}
+
+[node name="Key" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 550)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_dolqq")
+animation = &"right"

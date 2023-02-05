@@ -2,6 +2,8 @@ extends Marker2D
 
 class_name Objective
 
+@export var dir := Vector2.ZERO
+
 var is_root_detected := false
 
 func _on_detect_area_area_entered(area):

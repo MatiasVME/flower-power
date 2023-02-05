@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvo21r5bivbi7"]
 
-[ext_resource type="Texture2D" uid="uid://dct34rghgvtsm" path="res://Game/Background/plantilla.png" id="1_2do7u"]
 [ext_resource type="Script" path="res://MainScreens/MainMenu/MainMenu.gd" id="1_smk1l"]
+[ext_resource type="Texture2D" uid="uid://d260r52vumjpx" path="res://Game/Background/Fondo1.png" id="2_vchfc"]
 [ext_resource type="FontFile" uid="uid://l7nrw5flo473" path="res://Fonts/Sunflower.ttf" id="3_45ukj"]
 
 [node name="MainMenu" type="Control"]
@@ -17,7 +17,7 @@ script = ExtResource("1_smk1l")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_2do7u")
+texture = ExtResource("2_vchfc")
 
 [node name="Center" type="CenterContainer" parent="."]
 layout_mode = 1

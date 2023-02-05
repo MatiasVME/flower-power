@@ -6,13 +6,8 @@ const REC_ROOT_IMG = preload("res://Game/Root/root_image.tscn")
 const IMAGE_SIZE = 80
 const VELOCITY = 100
 
-# Mover esto a main
-var objectives := []
-var dir_index := -1
-
 # Root
 var root
-
 
 var movement := 0
 
@@ -20,7 +15,7 @@ var last_root_position = Vector2.ZERO
 
 func _ready():
 	for objective in owner.get_node("Objectives").get_children():
-		objectives.append(objective)
+		Main.objectives.append(objective)
 	
 	root = owner.get_node("Root")
 	
@@ -32,30 +27,39 @@ func _ready():
 
 
 func change_direction():
-	dir_index += 1
+	Main.dir_index += 1
+	
+	match Main.next_direction:
+		Vector2.LEFT:
+			Main.input_key.emit("left")
+		Vector2.UP:
+			Main.input_key.emit("down")
+		Vector2.RIGHT:
+			Main.input_key.emit("right")
 	
 	if root and is_instance_valid(root):
-		if dir_index < objectives.size():
+		if Main.dir_index < Main.objectives.size():
 			Main.last_direction = Main.current_direction
 			# Nueva dirección
-			Main.current_direction = objectives[dir_index].global_position - root.global_position
+			Main.current_direction = Main.objectives[Main.dir_index].global_position - root.global_position
+			Main.next_direction = Main.objectives[Main.dir_index + 1 % Main.objectives.size() - 1].dir.normalized().round()
 
 
 func _physics_process(delta):
 	if root and is_instance_valid(root):
 		root.global_position += delta * (Main.current_direction.normalized()) * VELOCITY
 		
-		if dir_index < objectives.size() and objectives[dir_index].is_root_detected:
+		if Main.dir_index < Main.objectives.size() and Main.objectives[Main.dir_index].is_root_detected:
 			change_direction()
 			
-			if dir_index < objectives.size():
-				objectives[dir_index].is_root_detected = false
+			if Main.dir_index < Main.objectives.size():
+				Main.objectives[Main.dir_index].is_root_detected = false
 	
 	# En el caso de que dir_index sea mayor que 0, se puede dibujar el sprite
-	if dir_index > 0 and last_root_position != objectives[dir_index - 1].global_position:
+	if Main.dir_index > 0 and last_root_position != Main.objectives[Main.dir_index - 1].global_position:
 		var new_sprite = REC_ROOT_IMG.instantiate()
 		owner.add_child(new_sprite)
-		last_root_position = objectives[dir_index - 1].global_position
+		last_root_position = Main.objectives[Main.dir_index - 1].global_position
 		new_sprite.global_position = last_root_position
 		
 		var last_dir_n = Main.last_direction.normalized().round()

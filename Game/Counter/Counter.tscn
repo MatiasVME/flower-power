@@ -1,0 +1,179 @@
+[gd_scene load_steps=8 format=3 uid="uid://ocsnr11jg1jf"]
+
+[ext_resource type="Script" path="res://Game/Counter/Counter.gd" id="1_hjr0t"]
+[ext_resource type="Texture2D" uid="uid://d260r52vumjpx" path="res://Game/Background/Fondo1.png" id="1_nv8jp"]
+[ext_resource type="Texture2D" uid="uid://bdkaune0uhsge" path="res://Game/HUD/Flor/Flor feliz.png" id="2_ux3p6"]
+[ext_resource type="FontFile" uid="uid://l7nrw5flo473" path="res://Fonts/Sunflower.ttf" id="4_il4fd"]
+
+[sub_resource type="Animation" id="Animation_krqu0"]
+resource_name = "Counter"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextCounter:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 2, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(179, 167), Vector2(179, 167), Vector2(179, 167), Vector2(1130, 153), Vector2(1130, 153)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextCounter:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextCounter/Counter:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.9, 2, 3.9, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["3", "3", "2", "2", "1", "1"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FlorFeliz:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.8, 2, 2.2, 2.5, 4),
+"transitions": PackedFloat32Array(1, 0.5, 0.5, 1, 1, 1, 0.5),
+"update": 0,
+"values": [Vector2(-556, 350), Vector2(-556, 350), Vector2(660, 350), Vector2(444, 401), Vector2(444, 401), Vector2(444, 401), Vector2(444, 401)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FlorFeliz:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.8, 2, 3.8, 4, 4.2, 4.8, 6),
+"transitions": PackedFloat32Array(1, 0.5, 1, 0.5, 0.5, 1, 0.5, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(0.2, 0.2), Vector2(0.4, 0.4), Vector2(0.4, 0.4), Vector2(0.7, 0.7), Vector2(0.6, 0.6), Vector2(0.6, 0.6), Vector2(3, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_cfxsf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextCounter:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(179, 167)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextCounter:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextCounter/Counter:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["3"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FlorFeliz:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-556, 350)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FlorFeliz:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.2, 0.2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j6m5f"]
+_data = {
+"Counter": SubResource("Animation_krqu0"),
+"RESET": SubResource("Animation_cfxsf")
+}
+
+[node name="Counter" type="Node2D"]
+script = ExtResource("1_hjr0t")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_nv8jp")
+centered = false
+
+[node name="FlorFeliz" type="Sprite2D" parent="."]
+position = Vector2(-556, 350)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ux3p6")
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+autoplay = "Counter"
+libraries = {
+"": SubResource("AnimationLibrary_j6m5f")
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="TextCounter" type="Node2D" parent="."]
+position = Vector2(179, 167)
+scale = Vector2(1e-05, 1e-05)
+
+[node name="Counter" type="Label" parent="TextCounter"]
+offset_left = -48.0
+offset_top = -192.0
+offset_right = 57.0
+offset_bottom = 199.0
+pivot_offset = Vector2(50, 192)
+theme_override_colors/font_color = Color(0.811765, 0.768627, 0.321569, 1)
+theme_override_fonts/font = ExtResource("4_il4fd")
+theme_override_font_sizes/font_size = 256
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="animation_finished" from="Anim" to="." method="_on_anim_animation_finished"]

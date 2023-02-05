@@ -26,13 +26,26 @@ metadata/_edit_lock_ = true
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 2
-offset_left = 824.0
-offset_top = 592.0
-offset_right = 1251.0
+offset_left = 17.0
+offset_top = 626.0
+offset_right = 208.0
 offset_bottom = 698.0
 theme_override_colors/font_color = Color(0.811765, 0.768627, 0.321569, 1)
 theme_override_fonts/font = ExtResource("3_45ukj")
-theme_override_font_sizes/font_size = 64
-text = "START"
+theme_override_font_sizes/font_size = 42
+text = "Start"
 
+[node name="Credits" type="Button" parent="."]
+layout_mode = 2
+offset_left = 1067.0
+offset_top = 626.0
+offset_right = 1258.0
+offset_bottom = 698.0
+theme_override_colors/font_color = Color(0.811765, 0.768627, 0.321569, 1)
+theme_override_fonts/font = ExtResource("3_45ukj")
+theme_override_font_sizes/font_size = 42
+text = "Credits"
+
+[connection signal="finished" from="BackgroundVideo" to="." method="_on_background_video_finished"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

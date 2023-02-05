@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1y6msmgbop05"]
+
+[ext_resource type="Script" path="res://Game/Credits/Credits.gd" id="1_1c70t"]
+[ext_resource type="FontFile" uid="uid://l7nrw5flo473" path="res://Fonts/Sunflower.ttf" id="1_nbc2l"]
+
+[node name="Credits" type="ColorRect"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = 305.0
+offset_right = -25.0
+offset_bottom = -31.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.784314)
+script = ExtResource("1_1c70t")
+
+[node name="Credits" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.835294, 0.301961, 0.701961, 1)
+theme_override_fonts/normal_font = ExtResource("1_nbc2l")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center][Art]
+[url=https://www.instagram.com/danna.artwork]Danna - Daniela Meza[/url]
+Cleiss - Michelle Reyes
+
+[Game Design]
+Jinsei - María José Zencovich
+
+[Músic]
+[url=https://www.youtube.com/@AkyonDev]Akyon - Eduardo Belmar[/url]
+
+[Programming]
+[url=https://www.youtube.com/@FuryCode]FuryCode - Matías Muñoz Espinoza[/url]
+[/center]"
+
+[connection signal="meta_clicked" from="Credits" to="." method="_on_credits_meta_clicked"]

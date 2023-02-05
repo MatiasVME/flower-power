@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2gvbcbjuh072"]
+[gd_scene load_steps=4 format=3 uid="uid://d2gvbcbjuh072"]
 
 [ext_resource type="Script" path="res://Autoload/MusicManager.gd" id="1_3srxj"]
-[ext_resource type="AudioStream" uid="uid://sdfnsrbw61rf" path="res://Music/gameplay_avance_beta.ogg" id="2_8rx4l"]
+[ext_resource type="AudioStream" uid="uid://dmwag2bi57vp4" path="res://Music/Gameplay.ogg" id="2_1t6rh"]
+[ext_resource type="AudioStream" uid="uid://b2st4wi6ibgq2" path="res://Music/Ambiente.ogg" id="3_yh42g"]
 
 [node name="MusicManager" type="Node"]
 script = ExtResource("1_3srxj")
 
 [node name="Level" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_8rx4l")
+stream = ExtResource("2_1t6rh")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yh42g")

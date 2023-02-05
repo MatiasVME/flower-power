@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bmipfwlxxj8qd" path="res://Effects/Bad.png" id="3_6nuqk"]
 [ext_resource type="Texture2D" uid="uid://btjye00nf20yi" path="res://Effects/Good.png" id="4_7g2ux"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qiv5g"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_l0wrv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -24,110 +24,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_664gn"]
-resource_name = "Positive"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Reforse:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(0.5, 0.5, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1.2, 1.2), Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Reforse:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector2(0, -74), Vector2(0, -110)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Reforse:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Reforse:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"positive"]
-}
-
-[sub_resource type="Animation" id="Animation_lnxdk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Reforse:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Reforse:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -74)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Reforse:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Reforse:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"positive"]
-}
-
-[sub_resource type="Animation" id="Animation_kk8mr"]
+[sub_resource type="Animation" id="Animation_agtbt"]
 resource_name = "Negative"
 length = 0.3
 tracks/0/type = "value"
@@ -179,17 +76,120 @@ tracks/3/keys = {
 "values": [&"negative"]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hsxwx"]
-_data = {
-"Negative": SubResource("Animation_kk8mr"),
-"Positive": SubResource("Animation_664gn"),
-"RESET": SubResource("Animation_lnxdk")
+[sub_resource type="Animation" id="Animation_5crha"]
+resource_name = "Positive"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Reforse:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Reforse:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, -74), Vector2(0, -110)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Reforse:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Reforse:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"positive"]
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8x7a"]
+[sub_resource type="Animation" id="Animation_yrq1x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Reforse:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Reforse:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -74)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Reforse:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Reforse:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"positive"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2s6v6"]
+_data = {
+"Negative": SubResource("Animation_agtbt"),
+"Positive": SubResource("Animation_5crha"),
+"RESET": SubResource("Animation_yrq1x")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpwbc"]
 size = Vector2(1, 1)
 
-[sub_resource type="Animation" id="Animation_520bk"]
+[sub_resource type="Animation" id="Animation_43rep"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -204,7 +204,7 @@ tracks/0/keys = {
 "values": [Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_x40om"]
+[sub_resource type="Animation" id="Animation_86x3i"]
 resource_name = "WII_EFFECT"
 length = 0.4
 tracks/0/type = "value"
@@ -220,13 +220,13 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1.01, 1.01), Vector2(1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_j7mo5"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ojc7s"]
 _data = {
-"RESET": SubResource("Animation_520bk"),
-"WII_EFFECT": SubResource("Animation_x40om")
+"RESET": SubResource("Animation_43rep"),
+"WII_EFFECT": SubResource("Animation_86x3i")
 }
 
-[sub_resource type="Animation" id="Animation_gfqp3"]
+[sub_resource type="Animation" id="Animation_pknim"]
 resource_name = "Idle"
 length = 0.4
 loop_mode = 1
@@ -243,7 +243,7 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_grr6b"]
+[sub_resource type="Animation" id="Animation_flxn6"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -258,13 +258,13 @@ tracks/0/keys = {
 "values": [Vector2(1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_68fyh"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fotm1"]
 _data = {
-"Idle": SubResource("Animation_gfqp3"),
-"RESET": SubResource("Animation_grr6b")
+"Idle": SubResource("Animation_pknim"),
+"RESET": SubResource("Animation_flxn6")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hubgl"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0ppc"]
 
 [node name="Root" type="CharacterBody2D"]
 collision_layer = 3
@@ -275,13 +275,13 @@ script = ExtResource("1_lrxqb")
 z_index = 1
 position = Vector2(0, -74)
 scale = Vector2(1e-05, 1e-05)
-sprite_frames = SubResource("SpriteFrames_qiv5g")
+sprite_frames = SubResource("SpriteFrames_l0wrv")
 animation = &"positive"
 
 [node name="Anim" type="AnimationPlayer" parent="Reforse"]
 root_node = NodePath("../..")
 libraries = {
-"": SubResource("AnimationLibrary_hsxwx")
+"": SubResource("AnimationLibrary_2s6v6")
 }
 
 [node name="RootImage" parent="." instance=ExtResource("2_tx8j8")]
@@ -291,7 +291,7 @@ animation = &"tip"
 [node name="Area" type="Area2D" parent="."]
 
 [node name="Collisioin" type="CollisionShape2D" parent="Area"]
-shape = SubResource("RectangleShape2D_k8x7a")
+shape = SubResource("RectangleShape2D_gpwbc")
 
 [node name="Camera" type="Camera2D" parent="."]
 limit_left = 0
@@ -305,14 +305,14 @@ drag_bottom_margin = 0.0
 
 [node name="Anim" type="AnimationPlayer" parent="Camera"]
 libraries = {
-"": SubResource("AnimationLibrary_j7mo5")
+"": SubResource("AnimationLibrary_ojc7s")
 }
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
 libraries = {
-"": SubResource("AnimationLibrary_68fyh")
+"": SubResource("AnimationLibrary_fotm1")
 }
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_hubgl")
+shape = SubResource("RectangleShape2D_v0ppc")

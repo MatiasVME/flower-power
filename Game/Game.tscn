@@ -101,7 +101,7 @@ dir = Vector2(0, -1)
 
 [node name="Objective17" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(800, 1200)
-dir = Vector2(0, -1)
+dir = Vector2(-1, 0)
 
 [node name="Objective18" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(720, 1200)
@@ -109,49 +109,403 @@ dir = Vector2(-1, 0)
 
 [node name="Objective19" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(640, 1200)
-dir = Vector2(-1, 0)
+dir = Vector2(0, -1)
 
 [node name="Objective20" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(640, 1280)
+dir = Vector2(0, -1)
 
 [node name="Objective21" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(640, 1360)
+dir = Vector2(-1, 0)
 
 [node name="Objective22" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(560, 1360)
+dir = Vector2(0, -1)
 
 [node name="Objective23" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(560, 1440)
+dir = Vector2(0, -1)
 
 [node name="Objective24" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(560, 1520)
+dir = Vector2(0, -1)
 
 [node name="Objective25" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(560, 1600)
+dir = Vector2(0, -1)
 
 [node name="Objective26" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(560, 1680)
+dir = Vector2(-1, 0)
 
 [node name="Objective27" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(480, 1680)
+dir = Vector2(0, -1)
 
 [node name="Objective28" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(480, 1760)
+dir = Vector2(-1, 0)
 
 [node name="Objective29" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(400, 1760)
+dir = Vector2(0, -1)
 
 [node name="Objective30" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(400, 1840)
+dir = Vector2(0, -1)
 
 [node name="Objective31" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(400, 1920)
+dir = Vector2(0, -1)
 
 [node name="Objective32" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(400, 2000)
+dir = Vector2(0, -1)
 
 [node name="Objective33" parent="Objectives" instance=ExtResource("5_gv825")]
 position = Vector2(400, 2080)
+dir = Vector2(0, -1)
+
+[node name="Objective34" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 2160)
+dir = Vector2(0, -1)
+
+[node name="Objective35" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 2240)
+dir = Vector2(0, -1)
+
+[node name="Objective36" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 2320)
+dir = Vector2(1, 0)
+
+[node name="Objective37" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 2320)
+dir = Vector2(1, 0)
+
+[node name="Objective38" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2320)
+dir = Vector2(0, -1)
+
+[node name="Objective39" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2400)
+dir = Vector2(0, -1)
+
+[node name="Objective40" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2480)
+dir = Vector2(0, -1)
+
+[node name="Objective41" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2560)
+dir = Vector2(0, -1)
+
+[node name="Objective42" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2640)
+dir = Vector2(0, -1)
+
+[node name="Objective43" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2720)
+dir = Vector2(0, -1)
+
+[node name="Objective44" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2800)
+dir = Vector2(0, -1)
+
+[node name="Objective45" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2880)
+dir = Vector2(0, -1)
+
+[node name="Objective46" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 2960)
+dir = Vector2(0, -1)
+
+[node name="Objective47" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 3040)
+dir = Vector2(1, 0)
+
+[node name="Objective48" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 3040)
+dir = Vector2(1, 0)
+
+[node name="Objective49" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(720, 3040)
+dir = Vector2(0, -1)
+
+[node name="Objective50" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(720, 3120)
+dir = Vector2(0, -1)
+
+[node name="Objective51" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(720, 3200)
+dir = Vector2(0, -1)
+
+[node name="Objective52" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(720, 3280)
+dir = Vector2(-1, 0)
+
+[node name="Objective53" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 3280)
+dir = Vector2(-1, 0)
+
+[node name="Objective54" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 3280)
+dir = Vector2(-1, 0)
+
+[node name="Objective55" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 3280)
+dir = Vector2(0, -1)
+
+[node name="Objective56" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 3360)
+dir = Vector2(-1, 0)
+
+[node name="Objective57" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 3360)
+dir = Vector2(0, -1)
+
+[node name="Objective58" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 3440)
+dir = Vector2(0, -1)
+
+[node name="Objective59" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 3520)
+dir = Vector2(0, -1)
+
+[node name="Objective60" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 3600)
+dir = Vector2(1, 0)
+
+[node name="Objective61" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 3600)
+dir = Vector2(1, 0)
+
+[node name="Objective62" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 3600)
+dir = Vector2(0, -1)
+
+[node name="Objective63" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 3680)
+dir = Vector2(0, -1)
+
+[node name="Objective64" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 3760)
+dir = Vector2(0, -1)
+
+[node name="Objective65" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 3840)
+dir = Vector2(0, -1)
+
+[node name="Objective66" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 3920)
+dir = Vector2(-1, 0)
+
+[node name="Objective67" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 3920)
+dir = Vector2(-1, 0)
+
+[node name="Objective68" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 3920)
+dir = Vector2(0, -1)
+
+[node name="Objective69" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4000)
+dir = Vector2(0, -1)
+
+[node name="Objective70" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4080)
+dir = Vector2(0, -1)
+
+[node name="Objective71" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4160)
+dir = Vector2(0, -1)
+
+[node name="Objective72" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4240)
+dir = Vector2(0, -1)
+
+[node name="Objective73" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4320)
+dir = Vector2(0, -1)
+
+[node name="Objective74" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4400)
+dir = Vector2(0, -1)
+
+[node name="Objective75" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4480)
+dir = Vector2(0, -1)
+
+[node name="Objective76" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4560)
+dir = Vector2(0, -1)
+
+[node name="Objective77" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4640)
+dir = Vector2(0, -1)
+
+[node name="Objective78" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4720)
+dir = Vector2(0, -1)
+
+[node name="Objective79" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4800)
+dir = Vector2(0, -1)
+
+[node name="Objective80" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4880)
+dir = Vector2(0, -1)
+
+[node name="Objective81" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(400, 4960)
+dir = Vector2(1, 0)
+
+[node name="Objective82" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(480, 4960)
+dir = Vector2(1, 0)
+
+[node name="Objective83" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 4960)
+dir = Vector2(0, -1)
+
+[node name="Objective84" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5040)
+dir = Vector2(0, -1)
+
+[node name="Objective85" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5120)
+dir = Vector2(0, -1)
+
+[node name="Objective86" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5200)
+dir = Vector2(0, -1)
+
+[node name="Objective87" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5280)
+dir = Vector2(0, -1)
+
+[node name="Objective88" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5360)
+dir = Vector2(0, -1)
+
+[node name="Objective89" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5440)
+dir = Vector2(0, -1)
+
+[node name="Objective90" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5520)
+dir = Vector2(0, -1)
+
+[node name="Objective91" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5600)
+dir = Vector2(0, -1)
+
+[node name="Objective92" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(560, 5680)
+dir = Vector2(1, 0)
+
+[node name="Objective93" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 5680)
+dir = Vector2(0, -1)
+
+[node name="Objective94" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 5760)
+dir = Vector2(0, -1)
+
+[node name="Objective95" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 5840)
+dir = Vector2(0, -1)
+
+[node name="Objective96" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 5920)
+dir = Vector2(0, -1)
+
+[node name="Objective97" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6000)
+dir = Vector2(0, -1)
+
+[node name="Objective98" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6080)
+dir = Vector2(0, -1)
+
+[node name="Objective99" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6160)
+dir = Vector2(0, -1)
+
+[node name="Objective100" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6240)
+dir = Vector2(0, -1)
+
+[node name="Objective101" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6320)
+dir = Vector2(0, -1)
+
+[node name="Objective102" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6400)
+dir = Vector2(0, -1)
+
+[node name="Objective103" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6480)
+dir = Vector2(0, -1)
+
+[node name="Objective104" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6560)
+dir = Vector2(0, -1)
+
+[node name="Objective105" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6640)
+dir = Vector2(0, -1)
+
+[node name="Objective106" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6720)
+dir = Vector2(0, -1)
+
+[node name="Objective107" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6800)
+dir = Vector2(0, -1)
+
+[node name="Objective108" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6880)
+dir = Vector2(0, -1)
+
+[node name="Objective109" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 6960)
+dir = Vector2(0, -1)
+
+[node name="Objective110" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7040)
+dir = Vector2(0, -1)
+
+[node name="Objective111" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7120)
+dir = Vector2(0, -1)
+
+[node name="Objective112" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7200)
+dir = Vector2(0, -1)
+
+[node name="Objective113" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7280)
+dir = Vector2(0, -1)
+
+[node name="Objective114" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7360)
+dir = Vector2(0, -1)
+
+[node name="Objective115" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7440)
+dir = Vector2(0, -1)
+
+[node name="Objective116" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7520)
+dir = Vector2(0, -1)
+
+[node name="Objective117" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7600)
+dir = Vector2(0, -1)
+
+[node name="Objective118" parent="Objectives" instance=ExtResource("5_gv825")]
+position = Vector2(640, 7680)
+dir = Vector2(0, -1)
 
 [node name="Clap" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_jbj1q")

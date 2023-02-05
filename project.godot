@@ -13,7 +13,7 @@ config_version=5
 config/name="FlowerPower"
 run/main_scene="res://MainScreens/MainMenu/MainMenu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
-boot_splash/image="res://icon.png"
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.png"
 
 [autoload]

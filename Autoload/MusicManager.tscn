@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2gvbcbjuh072"]
 
-[ext_resource type="AudioStream" uid="uid://385fu3kbm1gt" path="res://Music/gameplay_test_alpha_skeleton_thing.ogg" id="1_0ej6d"]
 [ext_resource type="Script" path="res://Autoload/MusicManager.gd" id="1_3srxj"]
+[ext_resource type="AudioStream" uid="uid://sdfnsrbw61rf" path="res://Music/gameplay_avance_beta.ogg" id="2_8rx4l"]
 
 [node name="MusicManager" type="Node"]
 script = ExtResource("1_3srxj")
 
 [node name="Level" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_0ej6d")
+stream = ExtResource("2_8rx4l")

@@ -5,12 +5,19 @@ class_name Root
 
 func _ready():
 	Main.positive_effect.connect(_on_positive_effect)
+	Main.negative_effect.connect(_on_negative_effect)
+	
 	Main.input_key.connect(_on_input_key)
 	Main.ending.connect(_on_ending)
 
 
 func _on_positive_effect():
 	$Camera/Anim.play("WII_EFFECT")
+	$Reforse/Anim.play("Positive")
+
+
+func _on_negative_effect():
+	$Reforse/Anim.play("Negative")
 
 
 func _on_input_key(key):

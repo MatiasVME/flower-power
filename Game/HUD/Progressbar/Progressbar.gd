@@ -9,9 +9,9 @@ func setup():
 func _on_timer_timeout():
 	$Progressbar.value += 1
 	
-	if $Progressbar.value == 75: # 75
+	if $Progressbar.value == 88: # 75 
 		Main.going_crazy.emit()
-	elif $Progressbar.value == 88: # 88
+	elif $Progressbar.value == 104: # 88
 		Main.going_evil.emit()
 	elif $Progressbar.value == 120: # 120
 		Main.ending.emit()

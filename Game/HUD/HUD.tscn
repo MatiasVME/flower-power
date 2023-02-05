@@ -1,7 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd0c7dbh4dss4"]
+[gd_scene load_steps=16 format=3 uid="uid://bd0c7dbh4dss4"]
 
 [ext_resource type="Script" path="res://Game/HUD/HUD.gd" id="1_ov8kc"]
+[ext_resource type="Texture2D" uid="uid://drno61nilyf22" path="res://Game/HUD/Flor/Flor locura.png" id="2_c65cp"]
+[ext_resource type="Texture2D" uid="uid://bjah1rhmei5ic" path="res://Game/HUD/Flor/Flor demente.png" id="3_10vei"]
+[ext_resource type="Texture2D" uid="uid://bdkaune0uhsge" path="res://Game/HUD/Flor/Flor feliz.png" id="4_t5has"]
+[ext_resource type="Texture2D" uid="uid://hfpggtw0vdnw" path="res://Game/HUD/Key/Down-00.png" id="5_oor3e"]
+[ext_resource type="Texture2D" uid="uid://3iqfwya3xdck" path="res://Game/HUD/Key/Down-01.png" id="6_st744"]
+[ext_resource type="Texture2D" uid="uid://c3py6b5h150vl" path="res://Game/HUD/Key/Left-00.png" id="7_bjh5b"]
+[ext_resource type="Texture2D" uid="uid://bh8hgqul7s5jd" path="res://Game/HUD/Key/Left-01.png" id="8_fmt11"]
+[ext_resource type="Texture2D" uid="uid://dqkkq8jw5fq6s" path="res://Game/HUD/Key/Right-00.png" id="9_j1gvt"]
+[ext_resource type="Texture2D" uid="uid://taxrahtk5mm2" path="res://Game/HUD/Key/Right-01.png" id="10_1molg"]
 [ext_resource type="PackedScene" uid="uid://x6ry6hhtymfq" path="res://Game/HUD/Progressbar/Progressbar.tscn" id="12_hc20u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_80pop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c65cp")
+}],
+"loop": true,
+"name": &"evil",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_10vei")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_t5has")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_br5q5"]
 resource_name = "Show"
@@ -11,12 +47,50 @@ _data = {
 "Show": SubResource("Animation_br5q5")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_3lupy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_oor3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_st744")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bjh5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fmt11")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_j1gvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1molg")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_ov8kc")
 
 [node name="Flower" type="AnimatedSprite2D" parent="."]
 position = Vector2(1129, 133)
 scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_80pop")
+animation = &"normal"
 
 [node name="Anim" type="AnimationPlayer" parent="Flower"]
 libraries = {
@@ -24,7 +98,9 @@ libraries = {
 }
 
 [node name="Key" type="AnimatedSprite2D" parent="."]
-position = Vector2(640, 550)
+position = Vector2(640, 637)
 scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_3lupy")
+animation = &"down"
 
 [node name="Progressbar" parent="." instance=ExtResource("12_hc20u")]

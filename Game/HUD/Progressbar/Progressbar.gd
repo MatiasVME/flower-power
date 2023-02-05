@@ -14,6 +14,6 @@ func _on_timer_timeout():
 	elif $Progressbar.value == 88: # 88
 		Main.going_evil.emit()
 	elif $Progressbar.value == 120: # 120
-		Curtain.change_scene_to_file("res://Game/End/End1.tscn")
+		Main.ending.emit()
 	
 	print($Progressbar.value)

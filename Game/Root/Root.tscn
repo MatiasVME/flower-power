@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Game/Root/Root.gd" id="1_lrxqb"]
 [ext_resource type="PackedScene" uid="uid://bqgbfowebat87" path="res://Game/Root/root_image.tscn" id="2_tx8j8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r5f8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8x7a"]
 size = Vector2(1, 1)
 
-[sub_resource type="Animation" id="Animation_7ypva"]
+[sub_resource type="Animation" id="Animation_520bk"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -21,7 +21,7 @@ tracks/0/keys = {
 "values": [Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_6lsbk"]
+[sub_resource type="Animation" id="Animation_x40om"]
 resource_name = "WII_EFFECT"
 length = 0.4
 tracks/0/type = "value"
@@ -37,13 +37,13 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1.01, 1.01), Vector2(1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nf6cg"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j7mo5"]
 _data = {
-"RESET": SubResource("Animation_7ypva"),
-"WII_EFFECT": SubResource("Animation_6lsbk")
+"RESET": SubResource("Animation_520bk"),
+"WII_EFFECT": SubResource("Animation_x40om")
 }
 
-[sub_resource type="Animation" id="Animation_cmb0r"]
+[sub_resource type="Animation" id="Animation_gfqp3"]
 resource_name = "Idle"
 length = 0.4
 loop_mode = 1
@@ -60,7 +60,7 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_ofbp5"]
+[sub_resource type="Animation" id="Animation_grr6b"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -75,13 +75,13 @@ tracks/0/keys = {
 "values": [Vector2(1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6hcew"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_68fyh"]
 _data = {
-"Idle": SubResource("Animation_cmb0r"),
-"RESET": SubResource("Animation_ofbp5")
+"Idle": SubResource("Animation_gfqp3"),
+"RESET": SubResource("Animation_grr6b")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m23t"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hubgl"]
 
 [node name="Root" type="CharacterBody2D"]
 collision_layer = 3
@@ -90,20 +90,18 @@ script = ExtResource("1_lrxqb")
 
 [node name="RootImage" parent="." instance=ExtResource("2_tx8j8")]
 z_index = 1
-animation = &"default"
+animation = &"tip"
 
 [node name="Area" type="Area2D" parent="."]
 
 [node name="Collisioin" type="CollisionShape2D" parent="Area"]
-shape = SubResource("RectangleShape2D_7r5f8")
+shape = SubResource("RectangleShape2D_k8x7a")
 
 [node name="Camera" type="Camera2D" parent="."]
-current = true
-process_callback = 0
 limit_left = 0
 limit_top = 0
 limit_right = 1280
-limit_smoothed = true
+limit_bottom = 7680
 drag_left_margin = 0.0
 drag_top_margin = 0.0
 drag_right_margin = 0.0
@@ -111,14 +109,14 @@ drag_bottom_margin = 0.0
 
 [node name="Anim" type="AnimationPlayer" parent="Camera"]
 libraries = {
-"": SubResource("AnimationLibrary_nf6cg")
+"": SubResource("AnimationLibrary_j7mo5")
 }
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 autoplay = "Idle"
 libraries = {
-"": SubResource("AnimationLibrary_6hcew")
+"": SubResource("AnimationLibrary_68fyh")
 }
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_5m23t")
+shape = SubResource("RectangleShape2D_hubgl")

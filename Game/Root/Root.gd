@@ -6,6 +6,7 @@ class_name Root
 func _ready():
 	Main.positive_effect.connect(_on_positive_effect)
 	Main.input_key.connect(_on_input_key)
+	Main.ending.connect(_on_ending)
 
 
 func _on_positive_effect():
@@ -21,3 +22,6 @@ func _on_input_key(key):
 		"right":
 			$RootImage.rotation_degrees = -90
 
+
+func _on_ending():
+	$Camera.enabled = false
